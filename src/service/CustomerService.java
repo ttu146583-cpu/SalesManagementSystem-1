@@ -57,7 +57,7 @@ public class CustomerService {
         int updateChoice = -1;
         String phoneTemp;
 
-        System.out.print("----------- Update Customer Information -----------");
+        System.out.println("----------- Update Customer Information -----------");
         System.out.print("Enter phone number> ");
         phoneTemp = sc.nextLine();
 
@@ -67,7 +67,7 @@ public class CustomerService {
             System.out.println("This phone number is NOT available");
             return;
         } else {
-            System.out.format("Customer: ", customers[index].getNameCustomer());
+            System.out.format("Customer Information: %s\n", customers[index].getNameCustomer());
         }
 
         // hiển thị thông tin khách hành xác định
@@ -88,6 +88,7 @@ public class CustomerService {
             System.out.println("  1. Name");
             System.out.println("  2. Phone number");
             System.out.println("  3. Address");
+            System.out.println("  0. Back");
             System.out.println("Enter your choice> ");
             updateChoice = sc.nextInt();
             sc.nextLine();
@@ -100,6 +101,7 @@ public class CustomerService {
                     newName = sc.nextLine();
 
                     customers[index].setNameCustomer(newName);
+                    break;
                 }
                 case 2: {   // Phone
                     String newPhone;
@@ -108,6 +110,7 @@ public class CustomerService {
                     newPhone = sc.nextLine();
 
                     customers[index].setPhoneCustomer(newPhone);
+                    break;
                 }
                 case 3: {   // Address
                     String newAddress;
@@ -116,12 +119,13 @@ public class CustomerService {
                     newAddress = sc.nextLine();
 
                     customers[index].setAddressCustomer(newAddress);
+                    break;
                 }
                 case 0: {
                     System.out.println("Backing...");
+                    break;
                 }
                 default:
-                    System.out.println("Nhap sai roi nhe!");
                     break;
             }
         } while (updateChoice != 0);      
