@@ -19,7 +19,8 @@ public class Product {
     private double price;
     private int stockQuantity;
 
-    // Constructor
+
+// Constructor
     public Product() {
     }
 
@@ -31,8 +32,7 @@ public class Product {
         this.stockQuantity = stockQuantity;
     }
 
-    public void UpdateStockProduct(int quantity) {
-        this.stockQuantity += quantity;
+    
     }
 
     // ID
@@ -79,6 +79,7 @@ public class Product {
     public void setStockQuantity(int stockQuantity) {
         this.stockQuantity = stockQuantity;
     } 
-    
+    public void updateStockQuantity(int quantity) {
+        this.stockQuantity += quantity;
 }
 
